@@ -1,1 +1,0 @@
-# Site-da-Nova-Igreja-Batista-de-Itacoatiara-NIB-

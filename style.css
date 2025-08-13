@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  justify-content: space-between; /* já empurra itens para as extremidades */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-size: 18px; /* aumenta o tamanho do texto */
+}
+
+a {
+  color: inherit;           /* Herda a cor do elemento pai */
+  text-decoration: none;    /* Remove a linha embaixo do link */
+}
+
+nav ul li a:hover {
+  color: #8b8b8b;           /* muda a cor ao passar o mouse */
+  text-decoration: underline; /* sublinha só no hover */
+}
+
+.ImagemP {
+    width: 100vh;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+}
+
+
+
