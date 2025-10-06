@@ -1,41 +1,280 @@
-header {
-  display: flex;
-  justify-content: space-between; /* já empurra itens para as extremidades */
-  align-items: center;
-  padding: 10px 20px;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-nav ul{
+header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* empurra itens para as extremidades */
   align-items: center;
+  padding: 15px 30px;
+  background-color: #2a1308; /* marrom escuro do footer */
+  color: #f1e7dc; /* bege claro */
+  border-bottom: 3px solid orangered; /* linha de destaque embaixo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  
+  /* Linha atravessando a tela inteira */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
 }
 
 nav ul li a {
-  font-size: 18px; /* aumenta o tamanho do texto */
+  position: relative;
+  font-size: 18px;
+  color: #f1e7dc;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* linha animada */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: orangered;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* hover com foco na linha */
+nav ul li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(255, 69, 0, 0.4); /* leve brilho laranja */
+}
+
+/* animação da linha */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* mantém a linha no link ativo */
+nav ul li a.active::after {
+  width: 100%;
 }
 
 a {
-  color: inherit;           /* Herda a cor do elemento pai */
-  text-decoration: none;    /* Remove a linha embaixo do link */
+  color: inherit;
+  text-decoration: none;
 }
 
-nav ul li a:hover {
-  color: #8b8b8b;           /* muda a cor ao passar o mouse */
-  text-decoration: underline; /* sublinha só no hover */
-}
+
+
+
 
 .ImagemP {
-    width: 100vh;
-    height: auto;
-    display: block;
-    object-fit: cover;
-
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 80%;
 }
 
+/* A imagem cobrindo a tela com proporção */
+.ImagemP img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Preenche mantendo a proporção */
+  object-position: center;
+  /* Centraliza a imagem */
+  display: block;
+  z-index: 1;
+}
 
+.ImagemM {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
 
+.ImagemM img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40px; /* só o tamanho do botão inicialmente */
+  overflow: hidden;
+  transition: width 0.4s ease;
+  cursor: pointer;
+}
+
+/* input inicia oculto e fora da tela */
+.search-form input[type="search"] {
+  width: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: width 0.4s ease, padding 0.4s ease;
+  opacity: 0;
+  margin-right: 5px;
+  pointer-events: none;
+}
+
+/* botão da lupa sempre visível */
+.search-form button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* ao focar no form (clicar na lupa), aumenta o width da área */
+.search-form:focus-within {
+  width: 250px; /* largura expandida */
+  cursor: auto;
+}
+
+/* ao expandir o form, input fica visível e com largura */
+.search-form:focus-within input[type="search"] {
+  width: 100%;
+  padding: 5px 10px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* hover no botão */
+.search-form button:hover {
+  color: #555;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+.custom-footer {
+      background: #2a1308;
+      color: #f1e7dc;
+      padding: 40px 20px;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      border-top: 3px solid rgb(0, 119, 255);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .footer-column {
+      flex: 1 1 250px;
+      min-width: 220px;
+    }
+    .footer-column h6 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+    .footer-column p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #f1e7dc;
+    }
+    .footer-column a {
+      color: #f1e7dc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-column a:hover {
+      color: rgb(0, 238, 255);
+      text-decoration: underline;
+    }
+    .social-icons {
+      display: flex;
+      gap: 25px;
+    }
+    .social-icons a {
+      font-size: 1.7rem;
+      color: #f1e7dc;
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #f1e7dc;
+      padding: 8px;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      background-color: transparent;
+    }
+    .social-icons a:hover {
+      color: white;
+      border-color: orangered;
+      background-color: orangered;
+      transform: scale(1.25) rotate(10deg);
+      box-shadow: 0 0 10px orangered;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+.custom-footer {
+  background-color: #2a1308; /* marrom escuro do footer */
+  color: #f1e7dc;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  border-top: 3px solid orangered; /* linha destacada */
+  width: 100vw; /* largura total da viewport */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* "puxa" o elemento para esquerda da viewport */
+  margin-right: -50vw; /* "puxa" o elemento para direita da viewport */
+  box-sizing: border-box;
+}
