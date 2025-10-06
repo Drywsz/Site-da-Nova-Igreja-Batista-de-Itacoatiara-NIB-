@@ -1,114 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Dinâmicos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Sobre</a></li>
-                <li><a href="#sobre">NovaNews</a></li>
-                <li><a href="#servicos">Ministérios</a></li>
-                <li><a href="#contato">Ofertas</a></li>
-                <li><a href="#contato">Meditações</a></li>
-                <li><a href="#contato">Decisões</a></li>
-            </ul>
-        </nav>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Sobre</a></li>
+        <li><a href="#sobre">NovaNews</a></li>
+        <li><a href="#servicos">Ministérios</a></li>
+        <li><a href="#contato">Ofertas</a></li>
+        <li><a href="#contato">Meditações</a></li>
+        <li><a href="#contato">Decisões</a></li>
+      </ul>
+    </nav>
 
-        <form class="search-form" action="#" method="GET">
-            <input type="search" name="q" placeholder="Pesquisar..." aria-label="Pesquisar">
-            <button type="submit">🔍</button>
-        </form>
+    <form class="search-form" action="#" method="GET">
+      <input type="search" name="q" placeholder="Pesquisar..." aria-label="Pesquisar">
+      <button type="submit">🔍</button>
+    </form>
+  </header>
 
-
-
-    </header>
-
-    <section>
-
-        <div class="ImagemP">
-            <img src="LogoPincipal.png" alt="ImagemdoCentro">
-
-            <div class="ImagemM">
-                <img src="LogoMeio.png" alt="ImagemdoMeio">
-            </div>
-        </div>
-
-        <div class="Conteúdo">
-            <h1>Bem-vindo ao meu site</h1>
-            <p>Este é um exemplo de container centralizado com largura máxima.</p>
-        </div>
-
-    </section>
-
-    <footer class="custom-footer">
-  <div class="container">
-    <div class="footer-row">
-
-      <div class="footer-column">
-        <h6>Endereço</h6>
-        <p>
-          Av. Torquato Tapajós, 4444<br>
-          Colônia Santo Antônio<br>
-          CEP: 69093-415<br>
-          Manaus – Amazonas – Brasil
-        </p>
-      </div>
-
-      <div class="footer-column">
-        <h6>Contatos</h6>
-        <p>
-          (92) 3236-6218<br>
-          (92) 3634-4005<br>
-          (92) 99215-0597<br>
-          <a href="mailto:igreja@nib.org.br">igreja@nib.org.br</a>
-        </p>
-      </div>
-
-      <div class="footer-column social">
-        <h6>Redes Sociais</h6>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/novaigrejabatista" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/novaigrejabatista" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/user/novaigrejabatista" target="_blank" aria-label="YouTube" rel="noopener noreferrer">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-
+  <div class="ImagemP">
+    <img src="LogoPincipal.png" alt="ImagemdoCentro">
+    <div class="ImagemM">
+      <img src="LogoMeio.png" alt="ImagemdoMeio">
     </div>
   </div>
-</footer>
+
+ <section class="eventos-section">
+  <h2>Alguns dos nossos eventos:</h2>
+  <div class="carousel-container"> <!-- container externo -->
+    <button class="carousel-btn prev">&#10094;</button>
+    <div class="carousel-wrapper">
+      <div class="eventos-container"></div>
+    </div>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
 
 
 
+  <footer class="custom-footer">
+    <div class="container">
+      <div class="footer-row">
 
-    <script>
-        const form = document.querySelector('.search-form');
-        const input = form.querySelector('input[type="search"]');
+        <div class="footer-column">
+          <h6>Endereço</h6>
+          <p>
+            Av. Torquato Tapajós, 4444<br>
+            Colônia Santo Antônio<br>
+            CEP: 69093-415<br>
+            Manaus – Amazonas – Brasil
+          </p>
+        </div>
 
-        form.addEventListener('submit', function (event) {
-            if (!input.value.trim()) {
-                event.preventDefault();  // evita o envio se vazio
-                input.focus();           // foca o campo para o usuário digitar
-            }
-        });
-    </script>
+        <div class="footer-column">
+          <h6>Contatos</h6>
+          <p>
+            (92) 3236-6218<br>
+            (92) 3634-4005<br>
+            (92) 99215-0597<br>
+            <a href="mailto:igreja@nib.org.br">igreja@nib.org.br</a>
+          </p>
+        </div>
 
+        <div class="footer-column social">
+          <h6>Redes Sociais</h6>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/novaigrejabatista" target="_blank" aria-label="Facebook"
+              rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/novaigrejabatista" target="_blank" aria-label="Instagram"
+              rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/user/novaigrejabatista" target="_blank" aria-label="YouTube"
+              rel="noopener noreferrer">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const eventos = [
+    { titulo: "Caipira Fest", descricao: "Um evento tradicional com comidas típicas, música ao vivo e muita diversão em família!", img: "eventos.jpg" },
+    { titulo: "Viagem de Natal", descricao: "Uma experiência inesquecível com apresentações especiais e celebrações de fim de ano.", img: "eventos.jpg" },
+    { titulo: "SENIB", descricao: "Seminário anual da NIB com palestras, adoração e momentos de comunhão entre irmãos.", img: "eventos.jpg" },
+    { titulo: "Retiro Jovem", descricao: "Momentos intensos de louvor, reflexão e comunhão entre os jovens da igreja.", img: "eventos.jpg" },
+    { titulo: "Culto da Família", descricao: "Celebração especial focada na união e fortalecimento dos lares cristãos.", img: "eventos.jpg" },
+    { titulo: "Semana Missionária", descricao: "Uma semana inteira dedicada à evangelização e ao serviço social.", img: "eventos.jpg" },
+    { titulo: "Louvorzão NIB", descricao: "Uma noite de adoração vibrante com música, luzes e muita energia espiritual.", img: "eventos.jpg" }
+  ];
+
+  const container = document.querySelector('.eventos-container');
+
+  eventos.forEach(evento => {
+    const card = document.createElement('div');
+    card.classList.add('evento');
+    card.innerHTML = `
+      <img src="${evento.img}" alt="${evento.titulo}">
+      <p>${evento.titulo}</p>
+      <p class="descricao">${evento.descricao}</p>
+    `;
+    container.appendChild(card);
+  });
+
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const cardWidth = 320; // largura aproximada do card + gap
+
+  nextBtn.addEventListener('click', () => {
+    // verifica se chegou ao final
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (container.scrollLeft <= 0) {
+      container.scrollTo({ left: container.scrollWidth - container.clientWidth, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    }
+  });
+</script>
 
 </body>
 
