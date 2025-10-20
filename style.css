@@ -402,3 +402,155 @@ section {
   gap: 20px;
   transition: transform 0.5s ease;
 }
+
+.igreja-modern {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0a4975;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #0a4975;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+.igreja-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.igreja-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.igreja-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.igreja-card h3 {
+  color: #0a4975;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+}
+
+.igreja-list {
+  list-style: none;
+  padding: 0;
+}
+
+.igreja-list li {
+  margin-bottom: 10px;
+}
+
+.igreja-list a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.igreja-list a i {
+  margin-right: 8px;
+  color: #0a4975;
+}
+
+.igreja-list a:hover {
+  color: #0a4975;
+}
+
+.igreja-details summary {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #0a4975;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.igreja-details ul {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.igreja-subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.igreja-subcard {
+  background: linear-gradient(145deg, #e9f1f8, #ffffff);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.igreja-subcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.igreja-subcard h4 {
+  color: #0a4975;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.igreja-subcard a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.igreja-subcard a i {
+  color: #0a4975;
+  margin-right: 6px;
+}
+
+.igreja-subcard a:hover {
+  color: #0a4975;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .igreja-card, .igreja-subcard {
+    padding: 20px;
+  }
+}
+
+.igreja-details a:hover {
+  color: #0a4975;
+}

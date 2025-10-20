@@ -36,16 +36,77 @@
     </div>
   </div>
 
- <section class="eventos-section">
-  <h2>Alguns dos nossos eventos:</h2>
-  <div class="carousel-container"> <!-- container externo -->
-    <button class="carousel-btn prev">&#10094;</button>
-    <div class="carousel-wrapper">
-      <div class="eventos-container"></div>
+  <section class="eventos-section">
+    <h2>Alguns dos nossos eventos:</h2>
+    <div class="carousel-container"> <!-- container externo -->
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-wrapper">
+        <div class="eventos-container"></div>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
-    <button class="carousel-btn next">&#10095;</button>
-  </div>
-</section>
+  </section>
+
+  <section class="igreja-modern">
+    <h2 class="section-title"><i class="fas fa-church"></i> Igreja</h2>
+
+    <div class="igreja-grid">
+      <!-- TEXTOS -->
+      <div class="igreja-card">
+        <h3><i class="fas fa-file-alt"></i> Textos</h3>
+        <ul class="igreja-list">
+          <li><a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 (PDF) - Força pra Mudar o Caráter</a></li>
+          <li><a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 (LETRA GRANDE) - Força pra Mudar o Caráter</a></li>
+          <li><a href="#"><i class="far fa-file-word"></i> 12/10/2025 (Word) - Força pra Mudar o Caráter</a></li>
+          <li><a href="#"><i class="far fa-file-word"></i> 12/10/2025 (LETRA GRANDE) - Força pra Mudar o Caráter</a>
+          </li>
+        </ul>
+        <details class="igreja-details">
+          <summary><i class="fas fa-chevron-down"></i> Anteriores (PDF)</summary>
+          <ul>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- ÁUDIOS -->
+      <div class="igreja-card">
+        <h3><i class="fas fa-headphones"></i> Áudios</h3>
+        <ul class="igreja-list">
+          <li><a href="#"><i class="fas fa-play-circle"></i> 13/10/2025 - Segunda-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 14/10/2025 - Terça-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 15/10/2025 - Quarta-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 16/10/2025 - Quinta-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 17/10/2025 - Sexta-feira</a></li>
+        </ul>
+        <details class="igreja-details">
+          <summary><i class="fas fa-chevron-down"></i> Anteriores (Word)</summary>
+          <ul>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 06/10/2025 - Semana anterior...</a></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <!-- SEÇÃO INFANTIL E KIDS -->
+    <div class="igreja-subgrid">
+      <div class="igreja-subcard">
+        <h4><i class="fas fa-child"></i> Kids</h4>
+        <a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 - Jonas</a>
+      </div>
+
+      <div class="igreja-subcard">
+        <h4><i class="fas fa-child"></i> Teens</h4>
+        <a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 - Jonas</a>
+      </div>
+
+  </section>
+
 
 
 
@@ -93,53 +154,55 @@
 
       </div>
     </div>
+
+
   </footer>
 
   <script>
-  const eventos = [
-    { titulo: "Caipira Fest", descricao: "Um evento tradicional com comidas típicas, música ao vivo e muita diversão em família!", img: "eventos.jpg" },
-    { titulo: "Viagem de Natal", descricao: "Uma experiência inesquecível com apresentações especiais e celebrações de fim de ano.", img: "eventos.jpg" },
-    { titulo: "SENIB", descricao: "Seminário anual da NIB com palestras, adoração e momentos de comunhão entre irmãos.", img: "eventos.jpg" },
-    { titulo: "Retiro Jovem", descricao: "Momentos intensos de louvor, reflexão e comunhão entre os jovens da igreja.", img: "eventos.jpg" },
-    { titulo: "Culto da Família", descricao: "Celebração especial focada na união e fortalecimento dos lares cristãos.", img: "eventos.jpg" },
-    { titulo: "Semana Missionária", descricao: "Uma semana inteira dedicada à evangelização e ao serviço social.", img: "eventos.jpg" },
-    { titulo: "Louvorzão NIB", descricao: "Uma noite de adoração vibrante com música, luzes e muita energia espiritual.", img: "eventos.jpg" }
-  ];
+    const eventos = [
+      { titulo: "Caipira Fest", descricao: "Um evento tradicional com comidas típicas, música ao vivo e muita diversão em família!", img: "eventos.jpg" },
+      { titulo: "Viagem de Natal", descricao: "Uma experiência inesquecível com apresentações especiais e celebrações de fim de ano.", img: "eventos.jpg" },
+      { titulo: "SENIB", descricao: "Seminário anual da NIB com palestras, adoração e momentos de comunhão entre irmãos.", img: "eventos.jpg" },
+      { titulo: "Retiro Jovem", descricao: "Momentos intensos de louvor, reflexão e comunhão entre os jovens da igreja.", img: "eventos.jpg" },
+      { titulo: "Culto da Família", descricao: "Celebração especial focada na união e fortalecimento dos lares cristãos.", img: "eventos.jpg" },
+      { titulo: "Semana Missionária", descricao: "Uma semana inteira dedicada à evangelização e ao serviço social.", img: "eventos.jpg" },
+      { titulo: "Louvorzão NIB", descricao: "Uma noite de adoração vibrante com música, luzes e muita energia espiritual.", img: "eventos.jpg" }
+    ];
 
-  const container = document.querySelector('.eventos-container');
+    const container = document.querySelector('.eventos-container');
 
-  eventos.forEach(evento => {
-    const card = document.createElement('div');
-    card.classList.add('evento');
-    card.innerHTML = `
+    eventos.forEach(evento => {
+      const card = document.createElement('div');
+      card.classList.add('evento');
+      card.innerHTML = `
       <img src="${evento.img}" alt="${evento.titulo}">
       <p>${evento.titulo}</p>
       <p class="descricao">${evento.descricao}</p>
     `;
-    container.appendChild(card);
-  });
+      container.appendChild(card);
+    });
 
-  const nextBtn = document.querySelector('.carousel-btn.next');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const cardWidth = 320; // largura aproximada do card + gap
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const cardWidth = 320; // largura aproximada do card + gap
 
-  nextBtn.addEventListener('click', () => {
-    // verifica se chegou ao final
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    }
-  });
+    nextBtn.addEventListener('click', () => {
+      // verifica se chegou ao final
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    });
 
-  prevBtn.addEventListener('click', () => {
-    if (container.scrollLeft <= 0) {
-      container.scrollTo({ left: container.scrollWidth - container.clientWidth, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    }
-  });
-</script>
+    prevBtn.addEventListener('click', () => {
+      if (container.scrollLeft <= 0) {
+        container.scrollTo({ left: container.scrollWidth - container.clientWidth, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      }
+    });
+  </script>
 
 </body>
 
