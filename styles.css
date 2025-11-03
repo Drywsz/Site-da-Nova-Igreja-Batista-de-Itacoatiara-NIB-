@@ -4,7 +4,6 @@
 ============================= */
 :root{
   --primary: #f9b234;      /* laranja suave (meditações) */
-  --primary-dark: #d97706; /* variação mais escura */
   --accent: #ffab40;
   --bg-light: #fff7ed;
   --bg-alt: #fce8c8;
@@ -47,11 +46,12 @@ header {
   padding: 15px 30px;
   background-color: var(--dark);
   color: #f1e7dc;
-  border-bottom: 3px solid var(--primary-dark);
+  border-bottom: 3px solid ;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   width: 100%;
   position: relative;
   z-index: 10;
+  border-color: #ff4000;
 }
 
 nav ul {
@@ -212,7 +212,7 @@ section {
 ============================= */
 /* ====== Eventos ====== */
 .eventos-section {
-  background-color: #8b3e15; /* mantém tom marcante dos eventos */
+  background-color: #fce8c; /* mantém tom marcante dos eventos */
   color: #f1e7dc;
   text-align: center;
   border-top: 3px solid var(--primary-dark);
@@ -581,148 +581,6 @@ section {
   color: #c68642;
 }
 
-/* ===== Meditações Diárias ===== */
-
-.meditacoes {
-  background: var(--bg-light);
-  color: #3d1c00;
-  font-family: 'Poppins', sans-serif;
-  padding: 4rem 2rem;
-}
-
-/* Cabeçalho */
-.meditacoes-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-.meditacoes-header h2 {
-  font-family: 'Merriweather', serif;
-  font-size: 3rem;
-  color: var(--primary-dark);
-  margin-bottom: 0.5rem;
-}
-.meditacoes-header p {
-  font-size: 1.2rem;
-  color: #6b3b12;
-}
-
-/* Banner da imagem */
-.banner-meditacao {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  height: 320px;
-  margin: 3rem auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  background: var(--bg-alt);
-}
-
-.banner-meditacao img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 1s ease;
-}
-.banner-meditacao:hover img {
-  transform: scale(1.05);
-}
-
-.banner-meditacao .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.2),
-    rgba(255,247,237,0.6)
-  );
-  pointer-events: none;
-}
-
-/* Cards de texto */
-.meditacoes-textos {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.meditacoes-textos h3 {
-  font-family: 'Merriweather', serif;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-dark);
-}
-
-.cards-textos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.card-texto {
-  background: #fffaf3;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-}
-.card-texto:hover {
-  box-shadow: 0 6px 14px rgba(249,178,52,0.25);
-  transform: translateY(-3px);
-}
-.card-texto .icon i {
-  color: var(--primary);
-  font-size: 2rem;
-}
-.card-texto h4 {
-  color: var(--primary-dark);
-  font-size: 1.1rem;
-  margin: 0.8rem 0;
-}
-.card-texto .links a {
-  margin-right: 0.8rem;
-  color: #d35400;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-.card-texto .links a:hover {
-  text-decoration: underline;
-}
-
-/* Botão central */
-.cta-meditacao {
-  text-align: center;
-  margin: 3rem auto 2rem;
-  background: rgba(249,178,52,0.1);
-  padding: 2rem;
-  border-radius: 16px;
-  max-width: 600px;
-}
-.cta-meditacao p {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: var(--primary-dark);
-}
-.btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  background: var(--primary-dark);
-  color: white;
-  padding: 0.9rem 2.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.btn-cta:hover {
-  background: var(--primary);
-  box-shadow: 0 0 10px rgba(249,178,52,0.5);
-}
-
 /* Histórico */
 .historico {
   text-align: center;
@@ -1064,4 +922,158 @@ section {
     gap: 25px;
     font-size: 1.6rem;
   }
+}
+
+/* ===== Meditações ===== */
+
+.igreja-modern {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0a4975;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #0a4975;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+.igreja-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.igreja-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.igreja-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.igreja-card h3 {
+  color: #0a4975;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+}
+
+.igreja-list {
+  list-style: none;
+  padding: 0;
+}
+
+.igreja-list li {
+  margin-bottom: 10px;
+}
+
+.igreja-list a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.igreja-list a i {
+  margin-right: 8px;
+  color: #0a4975;
+}
+
+.igreja-list a:hover {
+  color: #0a4975;
+}
+
+.igreja-details summary {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #0a4975;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.igreja-details ul {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.igreja-subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.igreja-subcard {
+  background: linear-gradient(145deg, #e9f1f8, #ffffff);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.igreja-subcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.igreja-subcard h4 {
+  color: #0a4975;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.igreja-subcard a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.igreja-subcard a i {
+  color: #0a4975;
+  margin-right: 6px;
+}
+
+.igreja-subcard a:hover {
+  color: #0a4975;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .igreja-card, .igreja-subcard {
+    padding: 20px;
+  }
+}
+
+.igreja-details a:hover {
+  color: #0a4975;
 }

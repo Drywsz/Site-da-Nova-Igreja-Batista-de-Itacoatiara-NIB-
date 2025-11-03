@@ -20,7 +20,7 @@
         <li><a href="#novanews">NovaNews</a></li>
         <li><a href="#ministerios">Ministérios</a></li>
         <li><a href="#ofertas">Ofertas</a></li>
-        <li><a href="#meditacoes">Meditações</a></li>
+        <li><a href="#meditações">Meditações</a></li>
         <li><a href="#decisoes">Decisões</a></li>
       </ul>
     </nav>
@@ -143,24 +143,74 @@
         <button class="fechar-modal" id="fecharForm" aria-label="Fechar">×</button>
         <h3>Conte Sua Decisão</h3>
         <form class="decisoes-form" onsubmit="enviarWhats(event)">
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Seu nome"
-            required
-            autocomplete="name" />
-          <input
-            type="text"
-            id="mensagem"
-            name="mensagem"
-            placeholder="Descreva sua decisão ou pedido"
-            required />
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name" />
+          <input type="text" id="mensagem" name="mensagem" placeholder="Descreva sua decisão ou pedido" required />
           <button type="submit" class="decisoes-btn">Enviar pelo WhatsApp</button>
         </form>
       </div>
     </div>
   </section>
+
+  <section class="igreja-modern" id="meditações">
+    <h2 class="section-title"><i class="fas fa-church"></i> Igreja</h2>
+
+    <div class="igreja-grid">
+      <!-- TEXTOS -->
+      <div class="igreja-card">
+        <h3><i class="fas fa-file-alt"></i> Textos</h3>
+        <ul class="igreja-list">
+          <li><a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 (PDF) - Força pra Mudar o Caráter</a></li>
+          <li><a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 (LETRA GRANDE) - Força pra Mudar o Caráter</a></li>
+          <li><a href="#"><i class="far fa-file-word"></i> 12/10/2025 (Word) - Força pra Mudar o Caráter</a></li>
+          <li><a href="#"><i class="far fa-file-word"></i> 12/10/2025 (LETRA GRANDE) - Força pra Mudar o Caráter</a>
+          </li>
+        </ul>
+        <details class="igreja-details">
+          <summary><i class="fas fa-chevron-down"></i> Anteriores (PDF)</summary>
+          <ul>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 05/10/2025 - Tema anterior...</a></li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- ÁUDIOS -->
+      <div class="igreja-card">
+        <h3><i class="fas fa-headphones"></i> Áudios</h3>
+        <ul class="igreja-list">
+          <li><a href="#"><i class="fas fa-play-circle"></i> 13/10/2025 - Segunda-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 14/10/2025 - Terça-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 15/10/2025 - Quarta-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 16/10/2025 - Quinta-feira</a></li>
+          <li><a href="#"><i class="fas fa-play-circle"></i> 17/10/2025 - Sexta-feira</a></li>
+        </ul>
+        <details class="igreja-details">
+          <summary><i class="fas fa-chevron-down"></i> Anteriores (Word)</summary>
+          <ul>
+            <li><a href="#"><i class="far fa-file-pdf"></i> 06/10/2025 - Semana anterior...</a></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <!-- SEÇÃO INFANTIL E KIDS -->
+    <div class="igreja-subgrid">
+      <div class="igreja-subcard">
+        <h4><i class="fas fa-child"></i> Kids</h4>
+        <a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 - Jonas</a>
+      </div>
+
+      <div class="igreja-subcard">
+        <h4><i class="fas fa-child"></i> Teens</h4>
+        <a href="#"><i class="far fa-file-pdf"></i> 12/10/2025 - Jonas</a>
+      </div>
+
+  </section>
+
 
   <!-- ======================================================
        RODAPÉ / FOOTER
@@ -192,13 +242,16 @@
         <div class="footer-column social">
           <h6>Redes Sociais</h6>
           <div class="social-icons">
-            <a href="https://www.facebook.com/novaigrejabatista" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/novaigrejabatista" target="_blank" aria-label="Facebook"
+              rel="noopener noreferrer">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/novaigrejabatista" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/novaigrejabatista" target="_blank" aria-label="Instagram"
+              rel="noopener noreferrer">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/user/novaigrejabatista" target="_blank" aria-label="YouTube" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/user/novaigrejabatista" target="_blank" aria-label="YouTube"
+              rel="noopener noreferrer">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -330,4 +383,5 @@
   </script>
 
 </body>
+
 </html>
